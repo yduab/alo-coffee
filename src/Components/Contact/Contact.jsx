@@ -5,6 +5,7 @@ import mail_icon from'../../assets/mail-icon.png'
 import phone_icon from'../../assets/phone-icon.png'
 import location_icon from'../../assets/location-icon.png'
 import white_arrow from'../../assets/white-arrow.png'
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 const Contact = () => {
 
     const [result, setResult] = React.useState("");
@@ -43,6 +44,9 @@ const Contact = () => {
                     <li><img src={mail_icon} alt="" />alocoffee20@gmail.com/ sales@alo-coffee.com</li>
                     <li><img src={phone_icon} alt="" />+251 930 177 620</li>
                     <li><img src={location_icon} alt="" />Addis Ababa, Ethiopia</li>
+                    <li><a href="https://web.facebook.com/alocoffee20/" target="_blank" rel="noopener noreferrer"> <FaFacebook size={30} color="blue" /></a> Facebook</li>
+                    <li><a href="https://www.instagram.com/alocoffee.et/" target="_blank" rel="noopener noreferrer"><FaInstagram size={30} color="purple" /> </a> Instagram</li>
+                  
                  </ul>
         </div>
         <div className="contact-col">
