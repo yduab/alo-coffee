@@ -1,0 +1,116 @@
+/* Gallery Container */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Display first set of images */
+.galleries {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.galleries img {
+    width: 23%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for gallery images */
+.galleries img:hover {
+    transform: scale(1.55); /* Slight zoom on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* See More Button */
+.btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #212121;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;  /* Ensures the button width fits the content */
+}
+
+.btn1 img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+/* Modal styling for additional images */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+}
+
+/* Modal Gallery Layout */
+.modal-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.modal-gallery img {
+    width: 23%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.modal-gallery img:hover {
+    transform: scale(1.55);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #212121;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Media Query */
+
+@media(max-width: 800px){
+    .galleries{
+        flex-wrap: wrap;
+    }
+    .galleries img{
+        width: 48%;
+        margin-bottom: 25px;
+    }
+}

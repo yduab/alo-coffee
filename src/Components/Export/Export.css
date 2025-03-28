@@ -1,0 +1,51 @@
+.exports{
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.export img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.export {
+    flex-basis: 31%;
+    position: relative;
+}
+.caption{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,15,152,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+
+    
+}
+.export:hover .caption{
+   opacity: 1; 
+}
+
+/* Media Query */
+
+@media(max-width:650px){
+    .exports{
+        flex-direction: column;
+    }
+    .export{
+        flex-basis: 100%;
+        margin: 20px;
+    }
+}
